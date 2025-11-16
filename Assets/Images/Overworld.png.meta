@@ -217,7 +217,7 @@ TextureImporter:
         serializedVersion: 2
         x: 351
         y: 385
-        width: 48
+        width: 49
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -237,8 +237,8 @@ TextureImporter:
       name: Overworld_1
       rect:
         serializedVersion: 2
-        x: 431
-        y: 481
+        x: 309
+        y: 454
         width: 97
         height: 95
       alignment: 0
@@ -300,7 +300,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_4
+      name: flower
       rect:
         serializedVersion: 2
         x: 563
@@ -322,7 +322,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_5
+      name: empty pot
       rect:
         serializedVersion: 2
         x: 593
@@ -564,7 +564,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_16
+      name: Tombstone
       rect:
         serializedVersion: 2
         x: 598
@@ -968,7 +968,7 @@ TextureImporter:
         width: 46
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -977,6 +977,160 @@ TextureImporter:
       bones: []
       spriteID: 6555d15f8dfc274498fd54941c23bde4
       internalID: -222031910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Overworld_0
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 541
+        width: 35
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1961c5be8e6dbec4f9ee83f14e3c9380
+      internalID: 288027186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: free
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 528
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a66fa919e31d004c8c54c33e0e7bd08
+      internalID: -4355686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Overworld_34
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 368
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad097399fec6a4740afca4bcff8e7cbc
+      internalID: 89102298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 257
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5013068c620270542b218ca95166336b
+      internalID: -940721568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 272
+        width: 13
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd11834fe25f1146aa42f83f7c89821
+      internalID: -9934904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bush
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 319
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef42eb47ac5fc6f47bd1cec9e8489668
+      internalID: -827953151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skulk
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 529
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0eb93cded86004e82ab34f74723f5a
+      internalID: 1200118656
       vertices: []
       indices: 
       edges: []
@@ -997,6 +1151,7 @@ TextureImporter:
     nameFileIdTable:
       Fountain: -2671460228953875570
       Log: -222031910
+      Overworld_0: 288027186
       Overworld_1: -2689026045669087484
       Overworld_10: 1829778442542560619
       Overworld_11: 1042250435856239393
@@ -1004,7 +1159,6 @@ TextureImporter:
       Overworld_13: 22681670905886300
       Overworld_14: 1620404892285306412
       Overworld_15: 1242996465418633367
-      Overworld_16: -2999399142424580601
       Overworld_17: 1195820583082778069
       Overworld_18: -4496587874173803107
       Overworld_19: -910953043492846142
@@ -1024,12 +1178,19 @@ TextureImporter:
       Overworld_31: 4304790786426730767
       Overworld_32: -3594059735059639123
       Overworld_33: 4003859095993293133
-      Overworld_4: 136357672767500387
-      Overworld_5: 8004674553903682165
+      Overworld_34: 89102298
       Overworld_6: -4047186976618406303
       Overworld_7: -5552291726514319404
       Overworld_8: 6677391079157347707
       Overworld_9: 3745290752181560014
+      Tombstone: -2999399142424580601
+      bush: -827953151
+      empty pot: 8004674553903682165
+      fence1: -940721568
+      fence2: -9934904
+      flower: 136357672767500387
+      free: -4355686
+      skulk: 1200118656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
