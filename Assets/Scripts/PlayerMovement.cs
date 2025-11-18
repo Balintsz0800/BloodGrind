@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         animation.horizontal = movementVector.x;
+        animation.vertical = movementVector.y;
         movementVector *= speed;
         rigid.linearVelocity = movementVector;
     }
