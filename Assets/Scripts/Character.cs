@@ -1,6 +1,7 @@
 using System;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class Character : MonoBehaviour
@@ -25,7 +26,7 @@ public class Character : MonoBehaviour
 
         if (currentHp <= 0)
         {
-            Debug.Log("Game Over! You are dead. :(");
+            SceneManager.LoadScene("DeathScene");
         }
         healthBar.State(currentHp, Hp);
     }
