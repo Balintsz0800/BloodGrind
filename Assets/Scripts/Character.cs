@@ -9,7 +9,6 @@ public class Character : MonoBehaviour
     public int Hp = 100; 
     public int currentHp;
     [SerializeField] HealthBar healthBar;
-    public GameObject DeathScreen;
 
     private void Start()
     {
@@ -28,7 +27,7 @@ public class Character : MonoBehaviour
         if (currentHp <= 0)
         {
             Time.timeScale = 0f;
-            DeathScreen.SetActive(true);
+            UIManager.instance.DeathScreen();
         }
         healthBar.State(currentHp, Hp);
     }

@@ -13,7 +13,9 @@ public class StartButton : MonoBehaviour
     public void weapon1()
     {
         SceneManager.LoadScene("GameplayScene");
+        Time.timeScale = 1f;
         Transform SpawnPos = GameObject.Find("SpawnPos").transform;
         Instantiate(PlayerwhipPrefab, SpawnPos.position, SpawnPos.rotation);
+        
     }
 }
