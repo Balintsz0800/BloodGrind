@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class StartButton : MonoBehaviour
 {
     public GameObject WeaponPanel;
-    public GameObject PlayerwhipPrefab;
     public void StartGame()
     {
         WeaponPanel.SetActive(true);
@@ -12,10 +11,8 @@ public class StartButton : MonoBehaviour
 
     public void weapon1()
     {
-        SceneManager.LoadScene("GameplayScene");
+        Data.SelectedWeapon = WeaponType.Whip;
         Time.timeScale = 1f;
-        Transform SpawnPos = GameObject.Find("SpawnPos").transform;
-        Instantiate(PlayerwhipPrefab, SpawnPos.position, SpawnPos.rotation);
-        
+        SceneManager.LoadScene("GameplayScene");
     }
 }

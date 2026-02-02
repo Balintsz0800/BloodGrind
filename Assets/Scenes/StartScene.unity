@@ -266,7 +266,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartButton
   WeaponPanel: {fileID: 365376205}
-  PlayerwhipPrefab: {fileID: 4878513890568676821, guid: 491c685581f04c1418bd7f704650178d, type: 3}
 --- !u!1 &201498790
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +636,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartButton
   WeaponPanel: {fileID: 365376205}
-  PlayerwhipPrefab: {fileID: 4878513890568676821, guid: 491c685581f04c1418bd7f704650178d, type: 3}
 --- !u!1 &468946916
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +825,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartButton
   WeaponPanel: {fileID: 365376205}
-  PlayerwhipPrefab: {fileID: 0}
 --- !u!114 &528402402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1054,7 +1051,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartButton
   WeaponPanel: {fileID: 0}
-  PlayerwhipPrefab: {fileID: 0}
 --- !u!114 &1176484259
 MonoBehaviour:
   m_ObjectHideFlags: 0
