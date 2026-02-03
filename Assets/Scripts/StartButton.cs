@@ -15,4 +15,11 @@ public class StartButton : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("GameplayScene");
     }
+
+    public void weapon2()
+    {
+        Data.SelectedWeapon = WeaponType.Aura;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("GameplayScene");
+    }
 }

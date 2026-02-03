@@ -7,5 +7,6 @@ public static class Data
 public enum WeaponType
 {
     None,
-    Whip
+    Whip,
+    Aura
 }

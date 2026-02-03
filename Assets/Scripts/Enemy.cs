@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     
     Rigidbody2D rb;
     
-    [SerializeField] int hp = 4;
+    [SerializeField] float hp = 4;
     [SerializeField] int damage = 1;
     private void Awake()
     {
@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
         targetCharacter.TakeDamage(damage);
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         hp -= damage;
 

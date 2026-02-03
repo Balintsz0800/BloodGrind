@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SpawnPos
   - DeathScreen
+  - Enemy
   layers:
   - Default
   - TransparentFX
