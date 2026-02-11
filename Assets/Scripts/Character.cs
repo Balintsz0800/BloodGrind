@@ -12,8 +12,7 @@ public class Character : MonoBehaviour
 
     public int level = 1;
     public int currentXp = 0;
-    public int xpToNextLevel = 10;
-    [SerializeField] XpBar xpBar;
+    public int xpToNextLevel = 15;
 
     private void Start()
     {
@@ -34,7 +33,7 @@ public class Character : MonoBehaviour
     {
         currentXp += amount;
 
-        if (currentXp > xpToNextLevel)
+        if (currentXp >= xpToNextLevel)
         {
             level++;
             currentXp = 0;
@@ -46,7 +45,6 @@ public class Character : MonoBehaviour
     void Update()
     {
         healthBar.State(currentHp, maxHp);
-        xpBar.State(currentXp, xpToNextLevel);
     }
     
     public void TakeDamage(int damage)

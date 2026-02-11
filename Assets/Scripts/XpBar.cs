@@ -1,17 +1,21 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class XpBar : MonoBehaviour
 {
-    [SerializeField] Transform xpBar;
+    private Slider slider;
+    private int currentXp, xpToNextLevel;
+    public Character character;
 
-    public void State(int current, int max)
+    private void Awake()
     {
-        float state = (float) current;
-        state /= max;
-        if (state < 0f)
-        {
-            state = 0f;
-        }
-        xpBar.localScale = new Vector3(state, 1f, 1f);
+        slider = GetComponent<Slider>();
+    }
+    private void Update()
+    {
+        float fillValue = (float)character.currentXp / character.xpToNextLevel;
+        slider.value = fillValue;
+        Debug.Log($"XP: {character.currentXp} / {character.xpToNextLevel} => Fill: {fillValue}");
     }
 }
