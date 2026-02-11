@@ -6,18 +6,47 @@ using UnityEngine.Serialization;
 
 public class Character : MonoBehaviour
 {
-    public int Hp = 100; 
+    public int maxHp = 100;
     public int currentHp;
     [SerializeField] HealthBar healthBar;
 
+    public int level = 1;
+    public int currentXp = 0;
+    public int xpToNextLevel = 10;
+    [SerializeField] XpBar xpBar;
+
     private void Start()
     {
-        currentHp = Hp;
+        currentHp = maxHp;
+    }
+
+    public void Heal(int amount)
+    {
+        currentHp += amount;
+
+        if (currentHp > maxHp)
+        {
+            currentHp = maxHp;
+        }
+    }
+
+    public void AddXp(int amount)
+    {
+        currentXp += amount;
+
+        if (currentXp > xpToNextLevel)
+        {
+            level++;
+            currentXp = 0;
+
+            xpToNextLevel += 10;
+        }
     }
 
     void Update()
     {
-        healthBar.State(currentHp, Hp);
+        healthBar.State(currentHp, maxHp);
+        xpBar.State(currentXp, xpToNextLevel);
     }
     
     public void TakeDamage(int damage)
@@ -29,6 +58,6 @@ public class Character : MonoBehaviour
             Time.timeScale = 0f;
             UIManager.instance.DeathScreen();
         }
-        healthBar.State(currentHp, Hp);
+        healthBar.State(currentHp, maxHp);
     }
 }

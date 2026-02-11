@@ -1,4 +1,6 @@
+using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
+using System.Collections;
 
 public class WhipAttack : MonoBehaviour
 {
@@ -23,25 +25,37 @@ public class WhipAttack : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer < 0f)
         {
-            Attack();
+            StartCoroutine(Attack());
         }
     }
 
-    public void Attack()
+    IEnumerator Attack()
     {
         timer = AttackTime;
 
         if (playerMovement.lastHorizontalVector > 0)
         {
             RightWhip.SetActive(true);
-            Collider2D[] colliders =  Physics2D.OverlapBoxAll(RightWhip.transform.position, whipAttackSize, 0f);
-            ApplyDamage(colliders);
+            Collider2D[] Rcolliders =  Physics2D.OverlapBoxAll(RightWhip.transform.position, whipAttackSize, 0f);
+            ApplyDamage(Rcolliders);
+
+            yield return new WaitForSeconds(0.3f);
+            
+            LeftWhip.SetActive(true);
+            Collider2D[] Lcolliders =  Physics2D.OverlapBoxAll(LeftWhip.transform.position, whipAttackSize, 0f);
+            ApplyDamage(Lcolliders);
         }
         else
         {
             LeftWhip.SetActive(true);
-            Collider2D[] colliders =  Physics2D.OverlapBoxAll(LeftWhip.transform.position, whipAttackSize, 0f);
-            ApplyDamage(colliders);
+            Collider2D[] Lcolliders =  Physics2D.OverlapBoxAll(LeftWhip.transform.position, whipAttackSize, 0f);
+            ApplyDamage(Lcolliders);
+            
+            yield return new WaitForSeconds(0.3f);
+            
+            RightWhip.SetActive(true);
+            Collider2D[] Rcolliders =  Physics2D.OverlapBoxAll(RightWhip.transform.position, whipAttackSize, 0f);
+            ApplyDamage(Rcolliders);
         }
     }
 
