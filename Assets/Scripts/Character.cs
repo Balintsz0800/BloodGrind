@@ -14,6 +14,8 @@ public class Character : MonoBehaviour
     public int currentXp = 0;
     public int xpToNextLevel = 15;
 
+    public SelectedWeaponUpgrade WeaponUpgrade;
+
     private void Start()
     {
         currentHp = maxHp;
@@ -37,8 +39,9 @@ public class Character : MonoBehaviour
         {
             level++;
             currentXp = 0;
-
             xpToNextLevel += 10;
+            
+            WeaponUpgrade.Upgrade();
         }
     }
 

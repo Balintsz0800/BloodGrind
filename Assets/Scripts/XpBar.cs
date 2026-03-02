@@ -16,6 +16,5 @@ public class XpBar : MonoBehaviour
     {
         float fillValue = (float)character.currentXp / character.xpToNextLevel;
         slider.value = fillValue;
-        Debug.Log($"XP: {character.currentXp} / {character.xpToNextLevel} => Fill: {fillValue}");
     }
 }
