@@ -197,5 +197,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CoinDrop
   DropItemPrefab: {fileID: 4828260104549313933, guid: a09d4e64f78f5004b8832151675843a0, type: 3}
   DropHealItemPrefab: {fileID: 3320803813989465823, guid: e9bce33c192df2144830356b856c962b, type: 3}
-  DropChance: 0.5
+  DropChance: 0.6
   HealDropChance: 0.15

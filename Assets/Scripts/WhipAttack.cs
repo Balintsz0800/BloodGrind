@@ -4,15 +4,15 @@ using System.Collections;
 
 public class WhipAttack : MonoBehaviour
 {
-    [SerializeField] private float AttackTime = 4f;
+    [SerializeField] public float AttackTime = 4f;
     private float timer;
     
     [SerializeField] GameObject LeftWhip;
     [SerializeField] GameObject RightWhip;
     
     PlayerMovement playerMovement;
-    [SerializeField] Vector2 whipAttackSize = new Vector2(4f, 2f);
-    [SerializeField] int whipDamage = 1;
+    [SerializeField] public Vector2 whipAttackSize = new Vector2(4f, 2f);
+    [SerializeField] public float whipDamage = 1;
 
     void Awake()
     {
