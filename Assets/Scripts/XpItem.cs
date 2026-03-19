@@ -1,8 +1,24 @@
+using System;
 using UnityEngine;
 
 public class XpItem : MonoBehaviour
 {
     public int XpAmount = 5;
+    Transform player;
+    public float MaxDistance = 20f;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+    
+    private void Update()
+    {
+        if (Vector3.Distance(player.position, transform.position) > MaxDistance)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
