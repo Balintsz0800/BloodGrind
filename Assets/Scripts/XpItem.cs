@@ -5,7 +5,7 @@ public class XpItem : MonoBehaviour
 {
     public int XpAmount = 5;
     Transform player;
-    public float MaxDistance = 20f;
+    public float MaxDistance = 40f;
 
     private void Start()
     {

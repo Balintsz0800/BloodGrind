@@ -1,33 +1,42 @@
-using System;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] Transform targetDestination;
-    GameObject target;
+    Transform target;
     Character targetCharacter;
-    [SerializeField] float speed;
+    public float speed;
     
     Rigidbody2D rb;
     
-    [SerializeField] float hp = 4;
+    [SerializeField] public float hp = 4;
     [SerializeField] int damage = 1;
-    private void Awake()
+
+    void Start()
+    {
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        if (playerObj != null)
+        {
+            target = playerObj.transform;
+            targetCharacter = playerObj.GetComponent<Character>();
+        }
+    }
+    
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        target = targetDestination.gameObject;
     }
 
     void FixedUpdate()
     {
-        Vector3 direction = (targetDestination.position - transform.position).normalized;
+        if (target == null) return;
+
+        Vector2 direction = (target.position - transform.position).normalized;
         rb.linearVelocity = direction * speed;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject == target)
+        if (target != null && collision.gameObject == target.gameObject)
         {
             Attack();
         }
@@ -35,18 +44,16 @@ public class Enemy : MonoBehaviour
 
     private void Attack()
     {
-        if (targetCharacter == null)
+        if (targetCharacter != null)
         {
-            targetCharacter = target.GetComponent<Character>();
+            targetCharacter.TakeDamage(damage);
         }
-        targetCharacter.TakeDamage(damage);
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damageAmount)
     {
-        hp -= damage;
-
-        if (hp < 1)
+        hp -= damageAmount;
+        if (hp <= 0)
         {
             Destroy(gameObject);
         }

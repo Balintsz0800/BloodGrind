@@ -5,7 +5,7 @@ public class HPItem : MonoBehaviour
 {
     public int HealAmount = 50;
     Transform player;
-    public float MaxDistance = 20f;
+    public float MaxDistance = 40f;
 
     private void Start()
     {
